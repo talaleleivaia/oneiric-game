@@ -1,0 +1,296 @@
+@import url('<link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">');
+
+
+body {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: lighter;
+    overflow: hidden;
+}
+
+body.switched {
+    transition: color 0.6s, background-color 0.6s;
+}
+
+h1,
+h2 {
+    text-align: center;
+    font-family: 'Teko', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 30pt;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 14pt;
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: #BBB;
+}
+
+.header {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+/*
+  Built-in class:
+    # author: Name
+*/
+.byline {
+    font-style: italic;
+}
+
+/* Navigation Styles */
+.nav-wrapper {
+    height: 20px;
+    width: 90%;
+    display: flex;
+    justify-content: right;
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+    margin-right: 15px;
+    position: fixed;
+    z-index: 4;
+}
+
+.left-side {
+    height: 22px;
+    
+    border-bottom: 1px solid transparent;
+    transition: 0.5s ease-in-out;
+}
+
+.left-side a {
+    margin-right: 15px;
+    margin-left: 15px;
+    color: rgb(175, 198, 204); /* Light blue */
+    text-decoration: none;
+
+    }
+
+.left-side a:hover {
+      border-bottom: 1px solid rgb(175, 198, 204);
+    }
+    
+
+.right-side {
+    display: flex;
+}
+
+/* 
+  Enables <iframe> support work on itch.io when using mobile iOS
+*/
+.outerContainer {
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin-top: 24px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 980px) {
+    .outerContainer {
+        margin-top: 44px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.container {
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 4em;
+    background: white;
+}
+
+.switched .container {
+    transition: background-color 0.6s;
+}
+
+p {
+    font-size: 13pt;
+    color: #888;
+    line-height: 1.7em;
+    font-weight: lighter;
+}
+/* this is the style for the choices and all links actually */
+a {
+    font-weight: 700;
+    color: hsla(190, 19%, 45%, 1);
+    font-family: sans-serif;
+    transition: color 0.6s;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    transition: color 0.1s;
+}
+
+strong {
+    color: black;
+    font-weight: bold;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.container .hide {
+    opacity: 0.0;
+}
+
+.container .invisible {
+    display: none;
+}
+
+.container>* {
+    opacity: 1.0;
+    transition: opacity 1.0s;
+}
+
+/*
+  Class applied to all choices
+  (Will always appear inside <p> element by default.)
+*/
+.choice {
+    text-align: center;
+    line-height: 1.7em;
+}
+
+/* 
+  Class applied to first choice
+*/
+:not(.choice)+.choice {
+    padding-top: 1em;
+}
+
+/*
+  Class applied to choice links
+*/
+.choice a {
+    font-size: 15pt;
+}
+
+/* 
+  Built-in class:
+    The End # CLASS: end
+*/
+.end {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#controls {
+    padding-bottom: 6px;
+    user-select: none;
+}
+
+#controls [disabled] {
+    color: #ccc;
+}
+
+#controls>*:not(:last-child):after {
+    content: " | ";
+}
+
+@media screen and (max-width: 980px) {
+    #controls {
+        z-index: 2;
+        padding-top: 24px;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+}
+
+/* 
+Orignially the dark theme but I disabled that by allowing the dark theme to permanently render
+*/
+
+body{
+    background: black;
+    color: hsla(190, 19%, 45%, 1);
+}
+
+ h2 {
+    color: #666;
+}
+
+ .container {
+    background: black;
+}
+
+ .written-in-ink {
+    background: black;
+}
+
+ a {
+    color: #EFC7BE;
+    transition: color 0.6s;
+}
+
+ a:hover {
+    color: hsla(8, 28%, 36%, 1);;
+}
+
+ strong {
+    color: white;
+}
+
+ #controls [disabled] {
+    color: #444;
+}
+
+ .end {
+    color: white;
+}
+
+#controls {
+    background: black;
+}
+
+
+/* Added Styles */
+.narration {
+    color: rgb(131, 131, 131);
+}
+
+.playerOption {
+    color: hsla(8, 28%, 36%, 1);
+}
+
+.marsh {
+    color: hsla(8, 28%, 36%, 1);;
+}
+
+.npc {
+    color: hsla(190, 19%, 45%, 1)
+}
+
+.npcAlt{
+    color: gold;
+}
